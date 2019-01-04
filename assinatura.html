@@ -1,126 +1,139 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style type="text/css">
-  
-#blah{
-  border-radius: 50%;
-  width: 60px;
-}
+  <head>
+    <style type="text/css">
+     
+     #blah{
+       border-radius: 50%;
+       width: 60px;
+     }
 
-#signature{
-  width: 600px;
-  height: 80px;
-  border-bottom-color: #680EB5;
-  border-bottom: 1px;
-}
+     #signature{
+       width: 600px;
+       height: 80px;
+       border-bottom-color: #680EB5;
+       border-bottom: 1px;
+     }
 
-#signature-photo{
-  width: 89.11px;
-  height: 80px;
-  float: left;
-}
+     #signature-photo{
+       width: 89.11px;
+       height: 80px;
+       float: left;
+     }
 
-#signature-name{
-  font-family: "Lato", sans-serif;
-  width: 166.89px;
-  height: 80px;
-  float: left;
-}
-#sig-n{
-  padding-top: 14.19px;
-  width: 100px;
-  height: 50.88px;
-  float: left;
-}
+     #signature-name{
+       font-family: "Lato", sans-serif;
+       width: 166.89px;
+       height: 80px;
+       float: left;
+     }
+     #sig-n{
+       padding-top: 14.19px;
+       width: 100px;
+       height: 50.88px;
+       float: left;
+     }
 
-#signature-tel{
-  font-family: "Lato", sans-serif;
-  width: 189.78px;
-  height: 80px;
-  float: left;
-}
-#sig-t{
-  padding-top: 14.8px;
-  width: 104.68px;
-  height: 47px;
-  float: left;
-}
+     #signature-tel{
+       font-family: "Lato", sans-serif;
+       width: 189.78px;
+       height: 80px;
+       float: left;
+     }
+     #sig-t{
+       padding-top: 14.8px;
+       width: 104.68px;
+       height: 47px;
+       float: left;
+     }
 
-#name{
-  font-size: 12px;
- font-family: "Lato", sans-serif ;
- color: rgb(104, 14, 181);
- font-weight: bold;
- text-align: left;
-}
+     #name{
+       font-size: 12px;
+       font-family: "Lato", sans-serif ;
+       color: rgb(104, 14, 181);
+       font-weight: bold;
+       text-align: left;
+     }
 
-#position{
-font-size: 10px;
-color: rgb(85, 85, 85);
-font-weight: bold;
-text-align: left;
-}
-#email{
- font-size: 10px;
- font-family: "Lato", sans-serif;
- color: rgb(85, 85, 85);
- text-align: left;
-}
+     #position{
+       font-size: 10px;
+       color: rgb(85, 85, 85);
+       font-weight: bold;
+       text-align: left;
+     }
+     #email{
+       font-size: 10px;
+       font-family: "Lato", sans-serif;
+       color: rgb(85, 85, 85);
+       text-align: left;
+     }
 
-#tel{
- font-size: 10px;
- text-align: left;
- color: rgb(85, 85, 85);
-}
-#skype {
- font-size: 10px;
- color: rgb(85, 85, 85);
- text-align: left;
-}
-#linkedin{
- font-size: 10px;
- color: rgb(85, 85, 85);
- text-align: left;
-}
+     #tel{
+       font-size: 10px;
+       text-align: left;
+       color: rgb(85, 85, 85);
+     }
+     #skype {
+       font-size: 10px;
+       color: rgb(85, 85, 85);
+       text-align: left;
+     }
+     #linkedin{
+       font-size: 10px;
+       color: rgb(85, 85, 85);
+       text-align: left;
+     }
 
-#signature-brand{
+     #signature-brand{
 
-}
-#sig-b{
-  
-}
-</style>
-</head>
-<body>
+     }
+     #sig-b{
+       
+     }
+    </style>
+  </head>
+  <body>
 
-</body>
+    <button id="trigger">Trigger</button>
+    <textarea id="target"></textarea>
+
+    <div id="source">
+      <div id="signature">
+        <div id="signature-photo">
+          <img style="padding-top: 10px; padding-bottom: 10px; padding-left: 12px;" id="blah" src="foto.jpg" alt="your image" />
+        </div>
+        <div id="signature-name">
+          <div id="sig-n">
+            <span id="name">Flinston Jhonson</span><br>
+            <span id="position">Seu Cargo </span><br>
+            <span id="email"> flinston.jhonson@configr.com</span>
+          </div>
+        </div>
+        <div id="signature-tel">
+          <div id="sig-t">
+            <span id="tel">+XX XX XXXXXX-XXXX</span><br>
+            <span id="skype">skype</span><br>
+            <span id="linkedin">linkedin</span>
+          </div>
+        </div>
+        <div id="signature-brand">
+          <div id="sig-b">
+            <!-- Aqui vem a parte da logomarca -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+     (function () {
+       let trigger = document.getElementById('trigger');
+       trigger.addEventListener("click", function() {
+         let target = document.getElementById('target');
+         let source = document.getElementById('source');
+         target.innerHTML = source.innerHTML;
+       });
+     })()
+    </script>
+
+  </body>
 </html>
-
-
-
-<div id="signature">
-    <div id="signature-photo">
-     <img style="padding-top: 10px; padding-bottom: 10px; padding-left: 12px;" id="blah" src="foto.jpg" alt="your image" />
-    </div>
-    <div id="signature-name">
-     <div id="sig-n">
-      <span id="name">Flinston Jhonson</span><br>
-      <span id="position">Seu Cargo </span><br>
-      <span id="email"> flinston.jhonson@configr.com<span>
-    </div>
-    </div>
-    <div id="signature-tel">
-     <div id="sig-t">
-      <span id="tel">+XX XX XXXXXX-XXXX</span><br>
-      <span id="skype">skype</span><br>
-      <span id="linkedin">linkedin</span>
-     </div>
-   </div>
-   <div id="signature-brand">
-    <div id="sig-b">
-      <!-- Aqui vem a parte da logomarca -->  
-    </div>
-   </div>
-  </div>
- </div>

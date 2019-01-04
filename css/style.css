@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+   background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  color: #0048978;
+  font-family: 'Lato', sans-serif;
+  margin-top: 40px
+}
+
+fieldset
+{
+  background-color: transparent;
+  max-width:400px;
+  padding:16px;	
+  border: dotted solid;
+  border-color: rgb(104, 14, 181);
+  border-width: 1px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+   margin: 0 auto;
+
+}
+
+label {
+  width: 150px;
+  text-align: right;
+}
+
+input {
+   margin: 2px;
+}
+
+.sign-off {
+  position:fixed;
+  width:100%;
+  bottom:10px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+
+}
+
+h1, label, legend {
+   font-family: "Lato", sans-serif;
+}
+
+#blah{
+  border-radius: 50%;
+  width: 60px;
+}
+
+#signature{
+  width: 600px;
+  height: 80px;
+  border-bottom-color: #680EB5;
+  border-bottom: 1px;
+}
+
+#signature-photo{
+  width: 89.11px;
+  height: 80px;
+  float: left;
+}
+
+#signature-name{
+  font-family: "Lato", sans-serif;
+  width: 166.89px;
+  height: 80px;
+  float: left;
+}
+#sig-n{
+  padding-top: 14.19px;
+  width: 100px;
+  height: 50.88px;
+  float: left;
+}
+
+#signature-tel{
+  font-family: "Lato", sans-serif;
+  width: 189.78px;
+  height: 80px;
+  float: left;
+}
+#sig-t{
+  padding-top: 14.8px;
+  width: 104.68px;
+  height: 47px;
+  float: left;
+}
+
+#name{
+  font-size: 12px;
+ font-family: "Lato", sans-serif ;
+ color: rgb(104, 14, 181);
+ font-weight: bold;
+ text-align: left;
+}
+
+#position{
+font-size: 10px;
+color: rgb(85, 85, 85);
+font-weight: bold;
+text-align: left;
+}
+#email{
+ font-size: 10px;
+ font-family: "Lato", sans-serif;
+ color: rgb(85, 85, 85);
+ text-align: left;
+}
+
+#tel{
+ font-size: 10px;
+ text-align: left;
+ color: rgb(85, 85, 85);
+}
+#skype {
+ font-size: 10px;
+ color: rgb(85, 85, 85);
+ text-align: left;
+}
+#linkedin{
+ font-size: 10px;
+ color: rgb(85, 85, 85);
+ text-align: left;
+}
+
+#signature-brand{
+
+}
+#sig-b{
+  
+}

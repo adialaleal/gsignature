@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+ <head>
+  <meta charset="UTF-8">
+  <title>Email signature generator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/diretrizes.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ </head>
+ <body>
+  <h1 class="title">Gerador de Assinaturas</h1>
+  </br>
+  <fieldset class="cfieldset">
+   <legend>Suas Informações</legend>
+   <label for ="nm"><i class="fas fa-user-circle"></i></label>
+   <input type = "text" name = "nm" id = "nm" required placeholder="Seu nome">
+   <br/>
+   <label for ="pos"><i class="far fa-building"></i></label>
+   <input type = "text" name = "pos" id = "pos" required placeholder="Seu cargo aqui com a gente">
+   <br/>
+   <label for="email"><i class="far fa-envelope"></i></label>
+   <input type="text" name="em" id = "em" required placeholder="seu_email@configr.com">
+   <br>
+   <label for="tel"><i class="fas fa-phone"></i></label>
+   <input type="text" name="mb" id="mb" required placeholder="+XX XX XXXXX-XXXX">
+   <br>
+   <label for="skype"><i class="fab fa-skype"></i></label>
+   <input type="text" name="sk" id = "sk" required placeholder="@seu_skype">
+   <br>
+   <label for="linkedin"><i class="fab fa-linkedin"></i></label>
+   <input type="text" name="lk" id = "lk" required placeholder="seulinkedin">
+   <br>
+   <label for="photo"><i class="fas fa-camera-retro"></i></label>
+    <input type='file' id="imgInp" />
+  </fieldset>
+ </br>
+</br>
+<input type="checkbox" id="review" name="review" onchange= "reviewFunction()"/>
+<label for ="review">Preview</b></label>
+</br>
+</br>
+<div class="row">
+ <div id="htmlcode">
+   <div id="signature">
+    <div id="signature-photo">
+     <img style="padding-top: 10px; padding-bottom: 10px; padding-left: 12px;" id="blah" src="#" alt="your image" />
+    </div>
+    <div id="signature-name">
+     <div id="sig-n">
+      <span id="name">Flinston Jhonson</span><br>
+      <span id="position">Seu Cargo </span><br>
+      <span id="email"> flinston.jhonson@configr.com<span>
+    </div>
+    </div>
+    <div id="signature-tel">
+     <div id="sig-t">
+      <span id="tel">+XX XX XXXXXX-XXXX</span><br>
+      <span id="skype">skype</span><br>
+      <span id="linkedin">linkedin</span>
+     </div>
+   </div>
+   <div id="signature-brand">
+    <div id="sig-b">
+      <!-- Aqui vem a parte da logomarca -->  
+    </div>
+   </div>
+  </div>
+ </div>
+ <br>
+ </br>
+<input type="checkbox" id="get" name="get" onchange= "getFunction()"/>
+   <label for = "get">Ver HTML</label>
+<p id="content"> Sua assinatura HTML</p>
+</div>
+</div>
+</br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script  src="js/index.js"></script>
+<script  src="js/input.js"></script>
+<script type="text/javascript">
+   function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#imgInp").change(function(){
+        readURL(this);
+    });
+  </script>
+  </body>
+</html>

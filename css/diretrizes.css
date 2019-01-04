@@ -1,0 +1,48 @@
+.Artboard_1 {
+ position: absolute;
+ left: 800px;
+ top: 280px;
+ width: 600px;
+ height: 80px;
+ z-index: 19;
+}
+.site {
+ font-size: 10px;
+ font-family: "Lato", sans-serif;
+ color: rgb(173, 174, 176);
+ line-height: 1.301;
+ text-align: left;
+ position: absolute;
+ left: 438.266px;
+ top: 75.423px;
+ z-index: 18;
+}
+.linha_roxa {
+ background-color: 
+ position: absolute;
+ width: 80px;
+ left: 9px;
+ top: 79px;
+ 
+ z-index: 16;
+}
+.contatos {
+ position: absolute;
+ left: -800px;
+ top: -280px;
+ width: 1600px;
+ height: 560px;
+ z-index: 14;
+}
+.Nome_e_cargo {
+ position: absolute;
+ left: -800px;
+ top: -280px;
+ width: 1600px;
+ height: 560px;
+ z-index: 6;
+}
+.configr{
+	width: 90.5px;
+}
+

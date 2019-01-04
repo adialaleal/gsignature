@@ -13,7 +13,8 @@ function getFunction(){
 		if (document.getElementById('get').checked) { 
 		var e=document.getElementById("htmlcode");
       var content=e.innerHTML;
-      
+      document.getElementById("html").innerHTML = content;
+
          
  		}
  	

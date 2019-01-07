@@ -95,9 +95,8 @@
         readURL(this);
     });
   //Function for encrypt email with MD5
-  function emailCatch(){
-    var email = document.getElementById('email').value
-    var _userHash = md5.create(email);
+  function emailCatch(){ 
+    var _userHash = String(md5(document.getElementById('em').value));
     return `https://secure.gravatar.com/avatar/${_userHash}?r=g`
   }
   //Function for put Gravatar Image on signature div.

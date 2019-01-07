@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" >
- <head>
-  <meta charset="UTF-8">
-  <title>Email signature generator</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/diretrizes.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
- </head>
- <body>
-  <h1 class="title">Gerador de Assinaturas</h1>
-  </br>
-  <fieldset class="cfieldset">
-   <legend>Suas Informações</legend>
-   <label for ="nm"><i class="fas fa-user-circle"></i></label>
-   <input type = "text" name = "nm" id = "nm" required placeholder="Seu nome">
-   <br/>
-   <label for ="pos"><i class="far fa-building"></i></label>
-   <input type = "text" name = "pos" id = "pos" required placeholder="Seu cargo aqui com a gente">
-   <br/>
-   <label for="email"><i class="far fa-envelope"></i></label>
-   <input type="text" name="em" id = "em" required placeholder="seu_email@configr.com">
-   <br>
-   <label for="tel"><i class="fas fa-phone"></i></label>
-   <input type="text" name="mb" id="mb" required placeholder="+XX XX XXXXX-XXXX">
-   <br>
-   <label for="skype"><i class="fab fa-skype"></i></label>
-   <input type="text" name="sk" id = "sk" required placeholder="@seu_skype">
-   <br>
-   <label for="linkedin"><i class="fab fa-linkedin"></i></label>
-   <input type="text" name="lk" id = "lk" required placeholder="seulinkedin">
-   <br>
-   <br>
-   <button type="button" onclick="setGravatar()">Gerar Imagem</button>
-  </fieldset>
- </br>
-</br>
-<input type="checkbox" id="review" name="review" onchange= "reviewFunction()"/>
-<label for ="review">Preview</b></label>
-</br>
-</br>
- <div id="source">
-   <div id="signature" style="width: 600px; height: 80px; border-bottom-color: #680EB5; border-bottom: 1px;">
-    <div id="signature-photo" style="width: 89.11px; height: 80px; float: left;">
-     <img style="padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border-radius: 50%; width: 60px;" id="blah" src="#" alt="your image" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Email signature generator</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/diretrizes.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 class="title">Gerador de Assinaturas</h1>
+        </br>
+        <fieldset class="cfieldset">
+            <legend>Suas Informações</legend>
+            <label for ="nm"><i class="fas fa-user-circle"></i></label>
+            <input type = "text" name = "nm" id = "nm" required placeholder="Seu nome">
+            <br/>
+            <label for ="pos"><i class="far fa-building"></i></label>
+            <input type = "text" name = "pos" id = "pos" required placeholder="Seu cargo aqui com a gente">
+            <br/>
+            <label for="email"><i class="far fa-envelope"></i></label>
+            <input type="text" name="em" id = "em" required placeholder="seu_email@configr.com">
+            <br>
+            <label for="tel"><i class="fas fa-phone"></i></label>
+            <input type="text" name="mb" id="mb" required placeholder="+XX XX XXXXX-XXXX">
+            <br>
+            <label for="skype"><i class="fab fa-skype"></i></label>
+            <input type="text" name="sk" id = "sk" required placeholder="@seu_skype">
+            <br>
+            <label for="linkedin"><i class="fab fa-linkedin"></i></label>
+            <input type="text" name="lk" id = "lk" required placeholder="seulinkedin">
+            <br>
+            <br>
+            <button type="button" onclick="setGravatar()">Gerar Imagem</button>
+        </fieldset>
+        </br>
+        </br>
+        <input type="checkbox" id="review" name="review" onchange= "reviewFunction()"/>
+        <label for ="review">Preview</b></label>
+        </br>
+        </br>
+        <div id="source">
+            <div id="signature" style="width: 620px; height: 80px; border-bottom-color: #680EB5; border-bottom: 1px;">
+                <div id="signature-photo" style="width: 89.11px; height: 80px; float: left;">
+                    <img style="margin-top: 13.5px; margin-bottom: 10px; margin-left: 12px; border-radius: 50%; width: 60px;" id="blah" src="#" alt="your image" />
+                </div>
+                <div id="signature-name" style="font-family: 'Lato', sans-serif; width: 196.89px; height: 80px; float: left;">
+                    <div id="sig-n" style="padding-top: 14.19px; width: 136px; height: 50.88px; float: left;">
+                        <span id="name" style="font-size: 12px;font-family: 'Lato', sans-serif;color: rgb(104, 14, 181);font-weight: bold;text-align: left;">Flinston Jhonson</span><br>
+                        <span id="position" style="font-size: 10px;color: rgb(85, 85, 85);font-weight: bold;text-align: left;">Seu Cargo </span><br>
+                        <span id="email" style="text-decoration:none; font-size: 10px;font-family: 'Lato', sans-serif;color: rgb(85, 85, 85);text-align: left;"> flinston.jhonson@configr.com<span>
+                        </div>
+                    </div>
+                    <div id="signature-tel" style="font-family: 'Lato', sans-serif; width: 159.78px; height: 80px; float: left;">
+                        <div id="sig-t" style="padding-top: 14.8px; width: 117.68px; height: 47px; float: left;">
+                            <img src="whatsapp.png" style="padding-right: 2px"><span id="tel" style=" font-size: 10px;text-align: left;color: rgb(85, 85, 85);">+XX XX XXXXXX-XXXX</span><br>
+                            <img src="skype.png" style="padding-right: 2px"><span id="skype" style="font-size: 10px;color: rgb(85, 85, 85);text-align: left;">skype</span><br>
+                            <img src="linkedin.png" style="padding-right: 2px"><span id="linkedin" style="font-size: 10px;color: rgb(85, 85, 85);text-align: left;">linkedin</span>
+                        </div>
+                    </div>
+                    <div id="signature-site" style="font-family: 'Lato', sans-serif; width: 79px; height: 80px; float: left;">
+                        <div id="sig-s" style="margin-top: 60px; height: 12px; float: left; font-size: 10px;">
+                            <a href="https://configr.com" style="color: rgb(85, 85, 85); text-decoration:none"><span>https://configr.com</span></a>
+                        </div>
+                    </div>
+                    <div id="signature-brand" style="font-family: 'Lato', sans-serif; height: 80px; float: left;">
+                        <div align="right" style="padding-left: 19px; padding-top: 55px;">
+                           <img src="configr.png"> 
+                        </div>
+                    </div>
+                </div>
+                <hr style="color: #680EB5; width: 610px;" align="left">
+            </div>
+            <br>
+        </div>
     </div>
-    <div id="signature-name" style="font-family: 'Lato', sans-serif; width: 166.89px; height: 80px; float: left;">
-     <div id="sig-n" style="padding-top: 14.19px; width: 100px; height: 50.88px; float: left;">
-      <span id="name" style="font-size: 12px;font-family: 'Lato', sans-serif;color: rgb(104, 14, 181);font-weight: bold;text-align: left;">Flinston Jhonson</span><br>
-      <span id="position" style="font-size: 10px;color: rgb(85, 85, 85);font-weight: bold;text-align: left;">Seu Cargo </span><br>
-      <span id="email" style=" font-size: 10px;font-family: 'Lato', sans-serif;color: rgb(85, 85, 85);text-align: left;"> flinston.jhonson@configr.com<span>
-    </div>
-    </div>
-    <div id="signature-tel" style="font-family: 'Lato', sans-serif; width: 189.78px; height: 80px; float: left;">
-     <div id="sig-t" style="padding-top: 14.8px; width: 104.68px; height: 47px; float: left;">
-      <span id="tel" style=" font-size: 10px;text-align: left;color: rgb(85, 85, 85);">+XX XX XXXXXX-XXXX</span><br>
-      <span id="skype" style="font-size: 10px;color: rgb(85, 85, 85);text-align: left;">skype</span><br>
-      <span id="linkedin" style="font-size: 10px;color: rgb(85, 85, 85);text-align: left;">linkedin</span>
-     </div>
-   </div>
-   <div id="signature-brand">
-    <div id="sig-b">
-      <!-- Aqui vem a parte da logomarca -->  
-    </div>
-   </div>
-  </div>
- </div>
- <br>
- </br>
-<button id="trigger">Ver HTML</button><br>
-    <textarea id="target"></textarea>
-</div>
-</div>
-</br>
-<script type="text/javascript" src="js/md5.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script  src="js/index.js"></script>
-<script  src="js/input.js"></script>
-<script type="text/javascript">
- //Function for insert images via upload files.
-  function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
+    </br>
+    <script type="text/javascript" src="js/md5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script  src="js/index.js"></script>
+    <script  src="js/input.js"></script>
+    <script type="text/javascript">
+    //Function for insert images via upload files.
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+    $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+    }
     }
     
     $("#imgInp").change(function(){
-        readURL(this);
+    readURL(this);
     });
-  //Function for encrypt email with MD5
-  function emailCatch(){ 
+    //Function for encrypt email with MD5
+    function emailCatch(){
     var _userHash = String(md5(document.getElementById('em').value));
     return `https://secure.gravatar.com/avatar/${_userHash}?r=g`
-  }
-  //Function for put Gravatar Image on signature div.
-  function setGravatar(){
+    }
+    //Function for put Gravatar Image on signature div.
+    function setGravatar(){
     document.getElementById('blah').src = emailCatch();
-  }
-</script>
+    }
+    </script>
 </body>
 </html>

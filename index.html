@@ -33,7 +33,6 @@
    <br>
    <br>
    <button type="button" onclick="setGravatar()">Gerar Imagem</button>
-
   </fieldset>
  </br>
 </br>
@@ -79,6 +78,7 @@
 <script  src="js/index.js"></script>
 <script  src="js/input.js"></script>
 <script type="text/javascript">
+ //Function for insert images via upload files.
   function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -94,13 +94,13 @@
     $("#imgInp").change(function(){
         readURL(this);
     });
-
+  //Function for encrypt email with MD5
   function emailCatch(){
     var email = document.getElementById('email').value
     var _userHash = md5.create(email);
     return `https://secure.gravatar.com/avatar/${_userHash}?r=g`
   }
-
+  //Function for put Gravatar Image on signature div.
   function setGravatar(){
     document.getElementById('blah').src = emailCatch();
   }

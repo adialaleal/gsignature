@@ -32,7 +32,10 @@
    <input type="text" name="lk" id = "lk" required placeholder="seulinkedin">
    <br>
    <label for="photo"><i class="fas fa-camera-retro"></i></label>
-    <input type='file' id="imgInp" />
+   <input type='file' id="imgInp" />
+   <br>
+   <button type="button" onclick="setGravatar()">Gerar Imagem</button>
+
   </fieldset>
  </br>
 </br>
@@ -40,8 +43,7 @@
 <label for ="review">Preview</b></label>
 </br>
 </br>
-<div class="row">
- <div id="htmlcode">
+ <div id="source" align="center">
    <div id="signature" style="width: 600px; height: 80px; border-bottom-color: #680EB5; border-bottom: 1px;">
     <div id="signature-photo" style="width: 89.11px; height: 80px; float: left;">
      <img style="padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border-radius: 50%; width: 60px;" id="blah" src="#" alt="your image" />
@@ -50,7 +52,7 @@
      <div id="sig-n" style="padding-top: 14.19px; width: 100px; height: 50.88px; float: left;">
       <span id="name" style="font-size: 12px;font-family: 'Lato', sans-serif;color: rgb(104, 14, 181);font-weight: bold;text-align: left;">Flinston Jhonson</span><br>
       <span id="position" style="font-size: 10px;color: rgb(85, 85, 85);font-weight: bold;text-align: left;">Seu Cargo </span><br>
-      <span id="email" style=" font-size: 10px;font-family: 'Lato', sans-serif;color: rgb(85, 85, 85);text-align: left;"> flinston.jhonson@configr.com<span>
+      <span id="email" name="email" style=" font-size: 10px;font-family: 'Lato', sans-serif;color: rgb(85, 85, 85);text-align: left;"> flinston.jhonson@configr.com<span>
     </div>
     </div>
     <div id="signature-tel" style="font-family: 'Lato', sans-serif; width: 189.78px; height: 80px; float: left;">
@@ -69,17 +71,17 @@
  </div>
  <br>
  </br>
-<input type="checkbox" id="get" name="get" onchange= "getFunction()"/>
-   <label for = "get">Ver HTML</label>
-<p id="html"> Sua assinatura HTML</p>
+<button id="trigger">Ver HTML</button><br>
+    <textarea id="target"></textarea>
 </div>
 </div>
 </br>
+<script type="text/javascript" src="node_modules/js-md5/build/md5.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script  src="js/index.js"></script>
 <script  src="js/input.js"></script>
 <script type="text/javascript">
-   function readURL(input) {
+  function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             
@@ -94,6 +96,16 @@
     $("#imgInp").change(function(){
         readURL(this);
     });
-  </script>
-  </body>
+
+  function emailCatch(){
+    var email = document.getElementById('email').value
+    var _userHash = md5.create(email);
+    return `https://secure.gravatar.com/avatar/${_userHash}?r=g`
+  }
+
+  function setGravatar(){
+    document.getElementById('blah').src = emailCatch();
+  }
+</script>
+</body>
 </html>

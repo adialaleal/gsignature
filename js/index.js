@@ -15,3 +15,12 @@ function getFunction(){
     document.getElementById("html").innerHTML = content;
   }
 }
+
+(function () {
+  let trigger = document.getElementById('trigger');
+  trigger.addEventListener("click", function() {
+    let target = document.getElementById('target');
+    let source = document.getElementById('source');
+    target.innerHTML = source.innerHTML;
+  });
+})

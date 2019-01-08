@@ -35,7 +35,7 @@ function addlinks(){
   var phoneid = document.getElementById("mb");
   var p = phoneid.value;
   document.getElementById('tel').innerHTML= p;
-  document.getElementById('tel').href="callto:"+p;
+  document.getElementById('tel').href="tel:"+p;
 //Add LinkedIn dinamic link.
   var linkedinid = document.getElementById("lk");
   var l = linkedinid.value;

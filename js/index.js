@@ -24,3 +24,10 @@ function getFunction(){
     target.innerHTML = source.innerHTML;
   });
 })
+
+function addskype(){
+var skypeid = document.getElementById("sk");
+var s = skypeid.value;
+document.getElementById('skype').innerHTML= s;
+document.getElementById('skype').href="skype:"+s+"?action";
+}

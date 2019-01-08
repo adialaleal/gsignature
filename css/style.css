@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Sans, Verdana');
 
 body {
    background-color: #f7f7f7;
@@ -33,18 +33,6 @@ label {
 
 input {
    margin: 2px;
-}
-
-.sign-off {
-  position:fixed;
-  width:100%;
-  bottom:10px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-
 }
 
 h1, label, legend {

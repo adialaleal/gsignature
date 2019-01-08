@@ -31,3 +31,15 @@ var s = skypeid.value;
 document.getElementById('skype').innerHTML= s;
 document.getElementById('skype').href="skype:"+s+"?userinfo";
 }
+function addphone(){
+var phoneid = document.getElementById("mb");
+var s = phoneid.value;
+document.getElementById('tel').innerHTML= s;
+document.getElementById('tel').href="callto:"+s;
+}
+function addskype(){
+var skypeid = document.getElementById("sk");
+var s = skypeid.value;
+document.getElementById('skype').innerHTML= s;
+document.getElementById('skype').href="skype:"+s+"?userinfo";
+}

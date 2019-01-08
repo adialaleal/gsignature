@@ -33,17 +33,17 @@ function addlinks(){
   document.getElementById('skype').href="skype:"+s+"?userinfo";
 //Add Phone dinamic link.
   var phoneid = document.getElementById("mb");
-  var s = phoneid.value;
-  document.getElementById('tel').innerHTML= s;
-  document.getElementById('tel').href="callto:"+s;
+  var p = phoneid.value;
+  document.getElementById('tel').innerHTML= p;
+  document.getElementById('tel').href="callto:"+p;
 //Add LinkedIn dinamic link.
   var linkedinid = document.getElementById("lk");
-  var s = skypeid.value;
-  document.getElementById('linkedin').innerHTML= s;
-  document.getElementById('linkedin').href="https://linkedin.com/in/"+s;
+  var l = linkedinid.value;
+  document.getElementById('linkedin').innerHTML= l;
+  document.getElementById('linkedin').href="https://linkedin.com/in/"+l
 //Add Email dinamic link.
   var emailid = document.getElementById("em");
-  var s = emailid.value;
-  document.getElementById('email').innerHTML= s;
-  document.getElementById('email').href="mailto:"+s;
+  var e = emailid.value;
+  document.getElementById('email').innerHTML= e;
+  document.getElementById('email').href="mailto:"+e;
 }

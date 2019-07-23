@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Gerador de Assinaturas</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/diretrizes.css">
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <!-- <link rel="stylesheet" href="css/diretrizes.css"> -->
         <link href="https://fonts.googleapis.com/css?family=Sans, Verdana" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
@@ -71,6 +71,10 @@
         </div>
     </div>
     </br>
+    </br>
+    </br>
+    <button id="trigger">Trigger</button>
+    <textarea id="target"></textarea>
     <script type="text/javascript" src="js/md5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script  src="js/index.js"></script>
@@ -101,6 +105,15 @@
     function setGravatar(){
     document.getElementById('blah').src = emailCatch();
     }
+
+    (function () {
+       let trigger = document.getElementById('trigger');
+       trigger.addEventListener("click", function() {
+         let target = document.getElementById('target');
+         let source = document.getElementById('source');
+         target.innerHTML = source.innerHTML;
+       });
+     })()
     </script>
 </body>
 </html>
